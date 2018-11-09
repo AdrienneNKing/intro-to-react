@@ -1,4 +1,4 @@
-<! doctype html>
+<!doctype html>
 <html>
 <head>
   <title>My First React App</title>
@@ -14,13 +14,29 @@
       return(
       <div>
         <h1>Hello World!</h1>
+        <h2>Fun with React</h2>
         </div>
       );
     }
   }
+  class Farewell extends React.Component{
+    render(){
+      return(
+        <div>
+        <h3>Thats all for now folks</h3>
+        </div>
+      );
+    }
+  }
+
 ReactDOM.render(
 <Greeting />, document.getElementById('app')
 );
+
+ReactDom.render(
+  <Farewell />, document.getElementById('app')
+);
+
 </script>
     </body>
     </html>
