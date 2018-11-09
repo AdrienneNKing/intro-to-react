@@ -10,11 +10,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 <script type="text/babel">
   class Greeting extends React.Component{
+    constructor(props){
+      super(props)
+      this.state = {
+        number:3
+      }
+    }
     render(){
       return(
       <div>
-        <h1>Hello {this.props.name}!</h1>
-        <h2>Fun with React</h2>
+        <h1>Hello {this.props.name}! You are on module {this.props.module}.</h1>
+        <h2>You are on checkpoint {this.state.number}</h2>
+        <h3>Have fun with React!</h3>
         </div>
       );
     }
@@ -30,7 +37,7 @@
   }
 
 ReactDOM.render(
-<Greeting name="Adrienne"/>, document.getElementById('app')
+<Greeting name="Adrienne" module="Front End Frameworks"/>, document.getElementById('app')
 );
 
 ReactDom.render(
